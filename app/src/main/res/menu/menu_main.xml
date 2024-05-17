@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_busca"
+        android:title="@string/menu_bottom_bar_busca"
+        android:icon="@drawable/ic_menu_busca"/>
+
+    <item android:id="@+id/menu_qrcode"
+        android:title="@string/menu_bottom_bar_qrcode"
+        android:icon="@drawable/ic_menu_qrcode"/>
+
+    <item android:id="@+id/menu_favoritos"
+        android:title="@string/menu_bottom_bar_favoritos"
+        android:icon="@drawable/ic_menu_favoritos"/>
+</menu>
