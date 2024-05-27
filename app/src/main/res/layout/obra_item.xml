@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="12dp">
+
+
+    <LinearLayout
+        android:id="@+id/l_lay_obra0"
+        android:layout_width="375dp"
+        android:layout_height="142dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_obra"
+            android:layout_width="109dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/retirantes" />
+
+        <LinearLayout
+            android:layout_width="206dp"
+            android:layout_height="146dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_nomeobra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pt_sans_caption"
+                android:text="Os Retirantes"
+                android:textColorLink="#000000"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_dataobra"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:fontFamily="@font/alata"
+                android:text="1944"
+                android:textColorLink="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_autorobra"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/pt_sans_regular"
+                android:text="Candido Portinari"
+                android:textColorLink="#000000"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

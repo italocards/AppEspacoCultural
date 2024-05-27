@@ -6,6 +6,7 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Base64
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
@@ -15,10 +16,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.io.ByteArrayOutputStream
 
 class CadastroObra : AppCompatActivity() {
 
     private lateinit var imagem: ImageView
+    private var base64Image: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,14 +49,15 @@ class CadastroObra : AppCompatActivity() {
 
         btn_confcadastro.setOnClickListener(){
 
-            //converter base64 bitmap factory
-
-            Firebase.firestore.collection("Obras").add(mapOf(
+            val obraNova = mapOf(
                 "nomeObra" to nomeObra.text.toString(),
                 "anoObra" to anoObra.text.toString(),
                 "artistaObra" to artistaObra.text.toString(),
-                "descricaoObra" to descricaoObra.text.toString()
-            ))
+                "descricaoObra" to descricaoObra.text.toString(),
+                "imagemBase64" to base64Image
+            )
+
+            Firebase.firestore.collection("Obras").add(obraNova)
         }
     }
 
@@ -65,11 +69,19 @@ class CadastroObra : AppCompatActivity() {
                 imageUri?.let {
                     val bitmap: Bitmap = MediaStore.Images.Media.getBitmap(contentResolver, it)
                     imagem.setImageBitmap(bitmap)
+                    base64Image = convertBitmapToBase64(bitmap)
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
             }
         }
+    }
+
+    private fun convertBitmapToBase64(bitmap: Bitmap): String {
+        val byteArrayOutputStream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
+        val byteArray: ByteArray = byteArrayOutputStream.toByteArray()
+        return Base64.encodeToString(byteArray, Base64.DEFAULT)
     }
 
 }
