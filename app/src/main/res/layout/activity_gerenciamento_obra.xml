@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/btn_scan"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GerenciamentoObra">
@@ -11,70 +11,20 @@
         android:id="@+id/frameLayout"
         android:layout_width="344dp"
         android:layout_height="536dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.495">
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical" />
 
-            <LinearLayout
-                android:id="@+id/l_lay_obra0"
-                android:layout_width="match_parent"
-                android:layout_height="146dp"
-                android:clickable="true"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/img_obra"
-                    android:layout_width="166dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/retirantes" />
-
-                <LinearLayout
-                    android:layout_width="206dp"
-                    android:layout_height="146dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tv_nomeobra"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/alata"
-                        android:text="Os Retirantes"
-                        android:textColorLink="#000000"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/tv_dataobra"
-                        android:layout_width="match_parent"
-                        android:layout_height="36dp"
-                        android:fontFamily="@font/alata"
-                        android:text="Editar"
-                        android:textColorLink="#000000"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/tv_autorobra"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:fontFamily="@font/alata"
-                        android:text="Excluir"
-                        android:textColorLink="#000000"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gerenciaList"
+            android:layout_width="match_parent"
+            android:layout_height="557dp" />
     </FrameLayout>
 
     <TextView

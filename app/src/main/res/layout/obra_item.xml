@@ -2,32 +2,38 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="8dp"
     app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
     android:layout_margin="12dp">
 
 
     <LinearLayout
         android:id="@+id/l_lay_obra0"
-        android:layout_width="375dp"
-        android:layout_height="142dp"
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
         android:clickable="true"
         android:focusable="true"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/img_obra"
-            android:layout_width="109dp"
+            android:layout_width="127dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/retirantes" />
 
+        <FrameLayout
+            android:layout_width="10dp"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
         <LinearLayout
-            android:layout_width="206dp"
-            android:layout_height="146dp"
-            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView

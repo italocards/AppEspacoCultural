@@ -54,5 +54,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
     implementation("com.google.firebase:firebase-firestore-ktx:24.11.1")
 
+    implementation("com.google.zxing:core:3.4.1")
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
 
 }
