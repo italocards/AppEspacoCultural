@@ -22,6 +22,7 @@
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
             android:text="Imagem"
             android:textSize="16sp" />
 
@@ -36,12 +37,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nome da Obra"
+            android:fontFamily="@font/rubik"
             android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edt_nomeEdicao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
             android:ems="10"
             android:inputType="text"
             android:textSize="20sp" />
@@ -50,6 +53,7 @@
             android:id="@+id/textView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
             android:text="Ano da Obra"
             android:textSize="16sp" />
 
@@ -57,6 +61,7 @@
             android:id="@+id/edt_anoEdicao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
             android:ems="10"
             android:inputType="text"
             android:textSize="20sp" />
@@ -65,6 +70,7 @@
             android:id="@+id/textView17"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
             android:text="Artista"
             android:textSize="16sp" />
 
@@ -72,6 +78,7 @@
             android:id="@+id/edt_artistaEdicao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
             android:ems="10"
             android:inputType="text"
             android:textSize="20sp" />
@@ -80,12 +87,14 @@
             android:id="@+id/textView16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
             android:text="Descrição"
             android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edt_descricaoEdicao"
             android:layout_width="match_parent"
+            android:fontFamily="@font/rubik"
             android:layout_height="157dp"
             android:ems="10"
             android:inputType="text"
@@ -96,18 +105,25 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_editarobra"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/background_button"
                 android:text="Editar" />
 
-            <Button
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1" />
+
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_excluirobra"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@drawable/background_button"
                 android:text="Excluir" />
 
         </LinearLayout>
@@ -119,7 +135,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:fontFamily="@font/alata"
+        android:fontFamily="@font/rubik_bold"
         android:text="Edição de Obra"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

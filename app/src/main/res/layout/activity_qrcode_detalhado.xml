@@ -1,21 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".QRCodeDetalhado">
 
-    <Button
-        android:id="@+id/btn_scan"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/TituloObras"
+        style="@style/Widget.AppCompat.TextView"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Scan QR Code"
-        android:layout_centerInParent="true"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="144dp"
+        android:fontFamily="@font/rubik_bold"
+        android:text="Escanear QR Code"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_scan"
+        android:layout_width="129dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/background_button"
+        android:fontFamily="@font/rubik"
+        android:text="Scan QR Code" />
 
     <TextView
         android:id="@+id/tv_resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik"
         android:layout_below="@id/btn_scan"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"

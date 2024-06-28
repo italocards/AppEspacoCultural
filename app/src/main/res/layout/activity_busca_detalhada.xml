@@ -7,12 +7,48 @@
     android:layout_height="match_parent"
     tools:context=".BuscaDetalhada">
 
+    <LinearLayout
+        android:layout_width="351dp"
+        android:layout_height="41dp"
+        android:background="@drawable/background_layout"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/img_btn_busca"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#e2e2e2"
+            app:srcCompat="@drawable/ic_search_line" />
+
+        <ImageButton
+            android:id="@+id/img_btn_qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#e2e2e2"
+            app:srcCompat="@drawable/ic_qr_code_line" />
+
+        <ImageButton
+            android:id="@+id/img_btn_avaliacao"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#e2e2e2"
+            app:srcCompat="@drawable/ic_menu_favoritos" />
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/TituloObras"
         style="@style/Widget.AppCompat.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/alata"
+        android:fontFamily="@font/rubik_bold"
         android:text="BUSCAR"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="24sp"
@@ -42,6 +78,7 @@
                 android:id="@+id/searchView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:fontFamily="@font/rubik"
                 android:queryHint="Procure pelo nome da obra"/>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -56,38 +93,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"/>
-
-    <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="1dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
-
-        <ImageButton
-            android:id="@+id/img_btn_busca"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_search_line" />
-
-        <ImageButton
-            android:id="@+id/img_btn_qrcode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_qr_code_line" />
-
-        <ImageButton
-            android:id="@+id/img_btn_avaliacao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_menu_favoritos" />
-
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

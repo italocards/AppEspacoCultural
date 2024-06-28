@@ -40,7 +40,7 @@
                 android:id="@+id/tv_nomeobra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/pt_sans_caption"
+                android:fontFamily="@font/rubik"
                 android:text="Os Retirantes"
                 android:textColorLink="#000000"
                 android:textSize="24sp" />
@@ -49,7 +49,7 @@
                 android:id="@+id/tv_dataobra"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
-                android:fontFamily="@font/alata"
+                android:fontFamily="@font/rubik"
                 android:text="1944"
                 android:textColorLink="#000000"
                 android:textSize="14sp" />
@@ -58,7 +58,7 @@
                 android:id="@+id/tv_autorobra"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/pt_sans_regular"
+                android:fontFamily="@font/rubik"
                 android:text="Candido Portinari"
                 android:textColorLink="#000000"
                 android:textSize="16sp" />

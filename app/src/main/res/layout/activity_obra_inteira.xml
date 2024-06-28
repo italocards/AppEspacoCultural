@@ -7,6 +7,42 @@
     android:layout_height="match_parent"
     tools:context=".ObraInteira">
 
+    <LinearLayout
+        android:layout_width="351dp"
+        android:layout_height="41dp"
+        android:background="@drawable/background_layout"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/img_btn_busca"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#e2e2e2"
+            app:srcCompat="@drawable/ic_search_line" />
+
+        <ImageButton
+            android:id="@+id/img_btn_qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#e2e2e2"
+            app:srcCompat="@drawable/ic_qr_code_line" />
+
+        <ImageButton
+            android:id="@+id/img_btn_avaliacao"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#e2e2e2"
+            app:srcCompat="@drawable/ic_menu_favoritos" />
+
+    </LinearLayout>
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="335dp"
@@ -29,11 +65,15 @@
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/retirantes" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
             <TextView
                 android:id="@+id/tv_nomeobra_detalhada"
                 android:layout_width="match_parent"
-                android:layout_height="62dp"
-                android:fontFamily="@font/pt_sans_caption"
+                android:layout_height="47dp"
+                android:fontFamily="@font/rubik"
                 android:text="Titulo Obra"
                 android:textSize="28sp" />
 
@@ -46,7 +86,7 @@
                     android:id="@+id/tv_dataobra_detalhada"
                     android:layout_width="266dp"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/pt_sans_regular"
+                    android:fontFamily="@font/rubik"
                     android:text="0000"
                     android:textSize="20sp" />
 
@@ -63,7 +103,7 @@
                 android:id="@+id/tv_autorobra_detalhada"
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
-                android:fontFamily="@font/pt_sans_regular"
+                android:fontFamily="@font/rubik"
                 android:text="Autor Obra"
                 android:textSize="20sp" />
 
@@ -71,43 +111,11 @@
                 android:id="@+id/tv_descricaoobra_detalhada"
                 android:layout_width="match_parent"
                 android:layout_height="208dp"
-                android:fontFamily="@font/pt_sans_regular"
+                android:fontFamily="@font/rubik"
                 android:text="Descricao Obra"
                 android:textSize="16sp" />
 
         </LinearLayout>
     </FrameLayout>
 
-    <LinearLayout
-        android:layout_width="350dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="1dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
-
-        <ImageButton
-            android:id="@+id/img_btn_busca"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_search_line" />
-
-        <ImageButton
-            android:id="@+id/img_btn_qrcode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_qr_code_line" />
-
-        <ImageButton
-            android:id="@+id/img_btn_avaliacao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/ic_menu_favoritos" />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
